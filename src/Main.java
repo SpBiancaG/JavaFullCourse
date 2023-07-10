@@ -1,45 +1,52 @@
 import java.util.Random;
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
 
-        //pseudo-random tho
-        Random random= new Random();
-        int x=random.nextInt(6)+1;//random number between 1 and 6, if we were not adding +1, it would've been between 0 and 5
-        double y=random.nextDouble();
-        boolean z=random.nextBoolean();
-        System.out.println(z);
+    Scanner scanner=new Scanner(System.in);
+    String name="";
+    String surname="";
 
-        //if statements
-        int age=18;
-        if(age>=18){
-            System.out.println("Person is an adult");
-        }
-        else {
-            System.out.println("Person is still a minor");
-        }
+    while(name.isBlank())
+    {
+        System.out.println("Enter name ");
+        name=scanner.nextLine();
+    }
 
 
-        //switch statements
+    do{
+        System.out.println("Enter your surname ");
+        surname=scanner.nextLine();
+    }while (surname.isBlank());
 
-        String day="Friday";
+        System.out.println("Hello "+name+" "+surname);
 
-        switch(day)
+    //for loop
+        for(int i=0;i<=10;i++)
         {
-            case "Sunday":
-                System.out.println("It is sunday");
-                break;
-            case "Monday":
-                System.out.println("It is Monday");
-                break;
-            case "Friday":
-                System.out.println("It is friday");
-                break;
-            default:
-                System.out.println("There s no such day");
+            System.out.println(i);
         }
 
+    //nested
+        Scanner scan=new Scanner(System.in);
+        int rows, columns;
+        String symbol=" ";
 
+        System.out.println("Enter # of rows ");
+        rows=scan.nextInt();
+        System.out.println("Enter 3 of columns ");
+        columns=scan.nextInt();
+        System.out.println("Enter symbol to use");
+        symbol=scan.next();
 
+        for(int i=1;i<=rows; i++)
+        {   System.out.println();
+            for(int j=1;j<=columns;j++)
+            {
+                System.out.print(symbol);
+            }
+        }
 
     }
 }
