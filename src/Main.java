@@ -1,39 +1,44 @@
-import java.util.Scanner;
+import java.util.Random;
 public class Main {
     public static void main(String[] args) {
 
-   double x=3.14;
-   double y= 10;
+        //pseudo-random tho
+        Random random= new Random();
+        int x=random.nextInt(6)+1;//random number between 1 and 6, if we were not adding +1, it would've been between 0 and 5
+        double y=random.nextDouble();
+        boolean z=random.nextBoolean();
+        System.out.println(z);
 
-   double maxi=Math.max(x,y);
-        System.out.println("Max value is "+maxi);
+        //if statements
+        int age=18;
+        if(age>=18){
+            System.out.println("Person is an adult");
+        }
+        else {
+            System.out.println("Person is still a minor");
+        }
 
-   double mini=Math.min(x,y);
-        System.out.println("Min value is "+mini);
 
-   double absoluteVal=Math.abs(y);//module of a number
-        System.out.println("Absolute value "+absoluteVal);
+        //switch statements
 
-   double squareRoot=Math.sqrt(y);
-        System.out.println("Square root value is "+squareRoot);
+        String day="Friday";
 
-   double round=Math.round(x);
-        System.out.println("Rounded value is "+round);
+        switch(day)
+        {
+            case "Sunday":
+                System.out.println("It is sunday");
+                break;
+            case "Monday":
+                System.out.println("It is Monday");
+                break;
+            case "Friday":
+                System.out.println("It is friday");
+                break;
+            default:
+                System.out.println("There s no such day");
+        }
 
-   double a;
-   double b;
-   double c;
-   Scanner scanner=new Scanner(System.in);
 
-        System.out.println("Enter side x: ");
-        a=scanner.nextDouble();
-
-        System.out.println("Enter side y: ");
-        b=scanner.nextDouble();
-        c=Math.sqrt((x*x)+(y*y));
-        System.out.println("Hypotenuse is "+c);
-
-        scanner.close();
 
 
     }
