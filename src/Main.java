@@ -1,45 +1,64 @@
-import java.util.Random;
-import java.util.Scanner;
+import java.util.ArrayList;
+
 
 public class Main {
     public static void main(String[] args) {
 
-        //arrays
-        String [] cars={"Camaro","Corvette","Tesla"};
-        cars[0]="Mustang";
-        System.out.println(cars[0]);
+      Boolean a= false;
+      Character b='@';
+      Integer c=123;
+      Double d=3.14;
+      String e="Bianca";
 
-        String[] cars2=new String[3];
+      if(a==true){
+          System.out.println("its true");
+      }
 
-        for (int i=0;i<cars.length;i++)
-        {
-            System.out.println(cars[i]);
-        }
+      //Array List= resizable array that works with reference data types
 
-        // 2D arrays
-        String[][] cars3=new String[3][3];
-        cars3[0][0]="Camaro";
+      ArrayList<String> food=new ArrayList<String>();
+      food.add("pizza");
+      food.add("hamburger");
+      food.add("hotdog");
 
-        for(int i=0;i<cars3.length;i++){
-            System.out.println();
-            for(int j=0;j<cars3[i].length;j++)
-            {
-                System.out.println(cars3[i][j]+" ");
-            }
-        }
+      food.set(0,"sushi");
+      food.remove(2);
+      food.clear();
+
+      for(int i=0;i<food.size();i++)
+      {
+          System.out.println(food.get(i));
+      }
+
+      ArrayList<ArrayList<String>> shop=new ArrayList();
+
+      ArrayList<String> shoppingList=new ArrayList();
+          shoppingList.add("donuts");
+          shoppingList.add("milk");
+          shoppingList.add("bonbons");
+
+      ArrayList<String> secondList=new ArrayList();
+        secondList.add("flour");
+        secondList.add("blabla");
+        secondList.add("bonbons");
+
+        ArrayList<String> thirdList=new ArrayList();
+        thirdList.add("donuts");
+        thirdList.add("coke");
+        thirdList.add("soda");
+
+        shop.add(shoppingList);
+        shop.add(secondList);
+        shop.add(thirdList);
 
 
-        //String methods
-        String name="Yo";
-        boolean r1=name.equals("Yo");//compares 2 strings and returns true or false
-        int r2=name.length();//length of the string
-        char r3=name.charAt(0);//the character at a certain position in the string
-        int r4=name.indexOf("o");//returns the index of  a certain letter
-        boolean r5=name.isEmpty();//if the string is null
-        String r6=name.toUpperCase();
-        String r7=name.toLowerCase();
-        String r8=name.trim();//kills all the empty spaces in my string
-        String result=name.replace('o','a');
+
+
+      System.out.println(shop);
+      System.out.println(shop.get(0).get(0));
+
+
+
 
 
 
